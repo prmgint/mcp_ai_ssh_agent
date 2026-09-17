@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-ai-ssh"
+version = "0.1.0"
+description = "MCP server for managing remote SSH sessions and background tasks"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastmcp>=0.4.0",
+    "paramiko>=3.0",
+    "pydantic>=2.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/prmgint/mcp-ai-ssh"
+
+[tool.setuptools]
+packages = ["mcp_ai_ssh"]
+
+[project.scripts]
+mcp-ai-ssh = "mcp_ai_ssh.ssh_server:run"
